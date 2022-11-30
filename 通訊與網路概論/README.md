@@ -5,7 +5,7 @@
 <img src="./img/img-1.png">
 
 ### 指令目錄
-<a href="#※-通用指令">通用指令</a> - <a href="#※-設定ip">設定ip</a> - <a href="#※-設定靜態路由ip">設定靜態路由ip</a> - <a href="#※-設定DGW">設定DGW</a> - <a href="#※-儲存狀態指令">儲存狀態指令</a>
+<a href="#user-content--通用指令">通用指令</a> - <a href="#user-content--設定ip">設定ip</a> - <a href="#user-content--設定靜態路由ip">設定靜態路由ip</a> - <a href="#user-content--設定DGW">設定DGW</a> - <a href="#user-content--儲存狀態指令">儲存狀態指令</a>
 
 ### ※ 通用指令
 | 指令   | 模式 | 解釋                                     |
