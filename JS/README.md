@@ -16,3 +16,17 @@ window.addEventListener("load", function(event) {
   // All resources finished loading!
 });
 ```
+子母畫面(Pip)
+```
+function togglePictureInPicture() {
+  if (document.pictureInPictureElement) {
+    document.exitPictureInPicture();
+  } else if (document.pictureInPictureEnabled) {
+    video.requestPictureInPicture();
+  }
+}
+```
+click Event 阻止向下傳遞
+```
+e.stopPropagation();
+```
