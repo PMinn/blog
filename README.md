@@ -8,6 +8,4 @@
 [Github](https://github.com/PMinn/blog/tree/main/Github)
 
 ## 語言
-[JS](https://github.com/PMinn/blog/tree/main/JS)
-
-[CSS](https://github.com/PMinn/blog/tree/main/CSS)
+[Web](https://github.com/PMinn/blog/tree/main/Web)
