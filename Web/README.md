@@ -1,4 +1,9 @@
-# CSS
+# HTML
+
+## icon
+
+# Favicon Generator
+[realfavicongenerator](https://realfavicongenerator.net/)
 
 ## 圖層混合模式
 ```
@@ -29,6 +34,9 @@ mix-blend-mode: difference;
     }
 }
 ```
+
+
+
 ---
 # JS
 
@@ -75,7 +83,11 @@ var sheet = ss.getSheetByName("sheet1");
 return ContentService.createTextOutput(JSON.stringify({})).setMimeType(ContentService.MimeType.JSON); 
 ```
 
-
+---
+# Nodejs
+```
+"type": "module"
+```
 
 ---
 # 框架
@@ -91,6 +103,7 @@ $ npm run dev
 #需要伺服器，下指令後只建置靜態資源，直接開啟index.html即可看到結果
 $ npm run build
 ```
+
 # 模板引擎
 ## ejs
 ```

@@ -6,6 +6,10 @@
 ```
 git checkout -b gh-pages
 ```
+cdn:
+```
+https://cdn.jsdelivr.net/gh/<user>/<repository>/<path>/<file>
+```
 ### 網址
 ```
 https://[你的帳號].github.io/[專案名稱]
