@@ -1,0 +1,49 @@
+
+# CSS
+
+## 毛玻璃 nav bar
+```
+.blur-nav::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: saturate(180%) blur(5px);
+    backdrop-filter: saturate(180%) blur(5px);
+    backface-visibility: hidden;
+    perspective: 1000;
+    z-index: -1;
+    top: -1px;
+    transform: translateZ(0);
+}
+```
+
+## scrollbar
+```
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+}
+```
+
+## ios的100vh不是100vh
+設定總高度，Child Element都用100%
+```
+@supports (-webkit-touch-callout: none) {
+    body {
+        min-height: -webkit-fill-available;
+    }
+}
+```
+
+## 圖層混合模式
+```
+mix-blend-mode: difference;
+```
+[demo](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode)

@@ -1,0 +1,22 @@
+# 模板引擎
+## ejs
+```
+ejs.render(ejs_str, data, options);
+// => Rendered HTML string
+
+ejs.renderFile(filename, data, options, function(err, str){
+    // str => Rendered HTML string
+});
+```
+```
+<% '腳本'標籤，用於流程控制，不輸出。
+<%_ 刪除其前面的空格符
+<%= 輸出數據到模板（輸出是轉義 HTML 標籤）
+<%- 輸出非轉義的數據到模板
+<%# 註釋標籤，不執行、不輸出內容
+<%% 輸出字串 '<%'
+
+%> 一般結束標籤
+-%> 刪除緊隨其後的換行符
+_%> 將結束束標記背面的空格符刪除
+```
