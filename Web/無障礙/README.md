@@ -1,0 +1,166 @@
+# 無障礙
+## 元件
+- 在body的左上要有"進入內容區塊"的anchor
+- 設定accesskey方便使用者用鍵盤跳躍
+- landmark
+<img src="./img/landmark.jpg">
+- 段落和內容
+  - `<article>`
+  - `<q>` 單行的引用文字
+  - `<blockquote>` 段落的的引用文字
+  - `<ul> <ol> <li>`
+  - `<p>`
+  - `<br>`
+  - `<del>` 刪除的內容
+  - `<i>` 斜體
+  - `<b>` 粗體
+  - `<em>` 強調的用意，以`<i>`呈現
+  - `<strong>` 重要的內容，以`<b>`呈現
+  - `<ins>` 插入的內容
+  - `<sub>` 下標
+  - `<sup>` 上標
+  - `<hr>`
+  - `<code>`
+  - `<time>`
+
+## 文字
+- 行高至少為字體的1.5倍
+- 段落間距至少為字體的2倍
+- letter space至少為字體的0.12倍，中文要0.14倍
+- 字間距至少為字體的0.16倍
+
+## 顏色和對比度
+大尺寸文:最少18pt(24px, 1.5em) or 粗體的14pt(19.2px, 1.2em)
+- AA:
+  - 小尺寸文字 4.5:1
+  - 大尺寸文字 3:1
+- AAA:
+  - 小尺寸文字 7:1
+  - 大尺寸文字 4.5:1
+
+對比度必須大於才可以。
+
+<mark>不要只以顏色傳達狀態</mark>，例如:表單的必填欄位，以文字或icon提示。
+
+icon的img要使用alt提示。
+
+## 圖片
+一開始定義好圖片大小，避免被切割。
+- 有意義的圖片一定要設定alt
+- 有意義的圖片不要使用background-image呈現
+- 使用`objet-fit: cover;`避免圖片跑版的問題
+
+## icon font
+使用`aria-hidden="true"`讓螢幕閱讀器略過
+或使用`aria-label="<% 內容 %>"`標記意思
+
+## 5秒以上的動態效果
+- 影片
+    - 都要使用control，重新設計或使用原生都可以。
+- 會自動撥放的影片
+- 動態GIF
+- CSS動畫
+- 文字捲動
+- 輪播 Carousel
+
+## 3秒以上的音訊
+必須能被暫停、終止或調節音量，常見為提供(取消)靜音按鈕。
+
+## 閃爍
+<mark>元件不可在一秒內閃爍超過3次</mark>，且不可藉由提供暫停或終止來符合規範，解決方法:降低閃爍頻率，或降低(?對比度和範圍)。
+
+## 圖、圖表
+<img src="./img/image.jpg" />
+
+
+## 表格
+<img src="./img/table.jpg" />
+
+`<tfoot>` 放註解或總計。
+
+`<thead>`、`<tbody>`和`<tfoot>`不能為空
+`<tr>`要在`<thead>`、`<tbody>`或`<tfoot>`裡面
+
+scope:
+用在th，定義方相關資料的方向。
+- `scope="col"`代表資料是直的
+- `scope="row"`代表資料是橫的
+- `scope="colgroup"`代表資料是直的，且搭配`colspan="2"`，代表資料有直的2排
+- `scope="rowgroup"`代表資料是橫的，且搭配`rowspan="6"`，代表資料有橫的6排
+
+headers:
+th和td都能使用，定義此資料屬於哪個th，使用id並用空白分割。
+
+```
+<td headers="th1_id th2_id th3_id">9 萬元</td>
+```
+
+摘要寫法:
+1. `<caption>` 必須是表格底下的第一個元件
+2. 使用一個DOM寫，並加上`aria-describedby="<% table_id %>"`，並在table上加上id
+3. 使用figure，`<figure>`包著`<figcaption>`和`<table>`，`<figcaption>`內部寫摘要且可以包含`<span>`和`<strong>`
+※ `summary`已被棄用
+
+## 按鈕元件
+`<a>`和`<button>`都可被選取到。
+
+如果有引導到頁面，就要使用`<a>`，不管是不是同頁面或同域；如果只是當成按鈕要加上`role="button"`。
+
+在`<a>`上加上`aria-label="<% 內容 %>"`可標記該連結的作用。
+
+<mark>表單以外的button要加上 type="button"，避免意外送出表單。</mark>
+
+可點擊元件寬高大於44px，常見範圍不足:麵包屑的高、只有icon的按鈕和footer的連結。
+
+## tabindex
+- tabindex="-1"
+  - 無法被tab focus
+  - 常用來避免carousel被focus時跑版
+- tabindex="0"
+  - 可以被tab focus
+  - 常用來做頁籤
+  - 常用來做有內部scroll時，在scroll的DOM加上tabindex，就可以用上下鍵scroll
+- tabindex="<% 正值 %>"
+  - 不建議使用
+ 
+## WAI-ARIA
+
+增強訪問性，[介紹](https://www.w3.org/WAI/ARIA/apg/example-index/)。
+
+- role 
+- aria-label 設定讀出的內容
+- aria-labelledby="<% target_id %>"將目標的文字設成當前DOM要讀出的內容
+- aria-describedby 和aria-labelledby相似，但可提供更長的資訊。
+- aria-hidden 忽略不讀出元件
+- aria-haspopup、aria-modal 
+- aria-current
+- aria-controls、aria-expanded
+- aria-pressed
+
+## 隱藏DOM
+1. 對所有人隱藏
+   - hidden
+   - display: none;
+   - visibility: hidden;
+2. 對閱讀器隱藏
+   - aria-hidden
+3. 對畫面隱藏
+   - bootstrap(v4:.sr-only、.sr-only-focusable, v5:.visually-hidden、.visually-hidden-focusable)
+   - keyword: accessibility、a11y
+
+## 視覺狀態
+- default
+- :hover
+- :active 按下時
+- :focus 滑鼠、觸控、鍵盤聚焦時
+- :focus-visible 只有鍵盤聚焦時
+- :visited 已訪問
+
+```
+:focus:not(:focus-visible) {
+    outline: none; /* 只取消滑鼠的樣式 */
+}
+```
+
+## 自動化測試流程
+- [axe DevTools](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd/related)

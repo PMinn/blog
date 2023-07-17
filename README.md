@@ -7,5 +7,5 @@
 ## 工具
 [Github](https://github.com/PMinn/blog/tree/main/Github)
 
-## 語言
+## Web
 [Web](https://github.com/PMinn/blog/tree/main/Web)
