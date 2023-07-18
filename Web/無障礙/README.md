@@ -136,6 +136,8 @@ th和td都能使用，定義此資料屬於哪個th，使用id並用空白分割
 - aria-current
 - aria-controls、aria-expanded
 - aria-pressed
+- aria-live (assertive強制性 polite會等待 off)
+- aria-level="<% n %>" 把非h的DOM設成n級標題
 
 ## 隱藏DOM
 1. 對所有人隱藏
@@ -164,3 +166,17 @@ th和td都能使用，定義此資料屬於哪個th，使用id並用空白分割
 
 ## 自動化測試流程
 - [axe DevTools](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd/related)
+- [Colour Contrast Analyser(CCA)](https://www.tpgi.com/color-contrast-checker/)
+
+## 編輯區
+1. `role="textbox"`
+2. `contenteditable="true`
+3. `aria-placeholder="<% 提示文字 %>"`
+4. `aria-labelledby="<% target_id %>"`
+
+## 訊息
+1. aria-live
+    - assertive 及時
+    - polite 隨後
+    - off 關閉
+2. `role="alert"`
