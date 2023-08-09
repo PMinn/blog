@@ -1,6 +1,6 @@
 # 1. 前置作業(好像有jdk就行)
 1. 安裝 IntelliJ IDEA Community
-   不要安裝最新版 安裝2020左右的(https://www.jetbrains.com/idea/download/other.html#2020.2)
+   不要安裝最新版 安裝2019.3左右的(https://www.jetbrains.com/idea/download/other.html#2020.2)
     進入 IntelliJ 的 File>Settings>Build,Execution,Deployment>Build Tools>Gradle，並將Gradle JVM更改為 17
 2. 安裝 Lombok plugin(https://plugins.jetbrains.com/plugin/6317-lombok)
 3. 安裝 Pebble plugin(https://plugins.jetbrains.com/plugin/9407-pebble)
