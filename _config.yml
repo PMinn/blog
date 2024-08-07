@@ -10,10 +10,10 @@
 ############################
 
 # Name of website
-title: Blog
+title: P'Min's Note
 
 # Your name to show in the footer
-author: P'min
+author: P'Min
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -48,12 +48,40 @@ round-avatar: true
 social-network-links:
   email: "p.min.developer@gmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  # facebook: deanattali
   github: pminn
+  # twitter: daattali
+  # patreon: DeanAttali
+  # youtube: "@daattali"
+  # whatsapp: 15551212
+#  medium: yourname
+#  reddit: yourname
+#  linkedin: daattali
+#  xing: yourname
+#  stackoverflow: "3943160/daattali"
+#  snapchat: deanat78
   instagram: pmin.dev
+#  spotify: yourname
+#  telephone: +14159998888
+#  steam: deanat78
+#  twitch: yourname
+#  yelp: yourname
+#  telegram: yourname
+#  calendly: yourname
+#  mastodon: instance.url/@username
+#  bluesky: yourname
+#  ORCID: your ORCID ID
+#  google-scholar: your google scholar
+#  discord: "invite_code" or "users/userid" or "invite/invite_code" 
+#  kaggle: yourname
+#  hackerrank: yourname
+#  gitlab: yourname
+#  itchio: yourname
+#  untappd: yourname
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: Blog
+rss-description: This website is P'Min's Note.
 
 ###########################
 # --- General options --- #
@@ -227,13 +255,13 @@ navbar-var-length: false
 
 # Output options (more information on Jekyll's site)
 # timezone: "America/Toronto"
-# markdown: kramdown
-# highlighter: rouge
-# permalink: /:year-:month-:day-:title/
-# paginate: 5
+markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
 
-# kramdown:
-#   input: GFM
+kramdown:
+  input: GFM
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
@@ -268,3 +296,4 @@ plugins:
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
+
