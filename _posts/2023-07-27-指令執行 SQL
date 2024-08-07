@@ -1,0 +1,13 @@
+---
+layout: post
+title: 指令執行 SQL
+tags: [SQL,Web Design]
+---
+
+` sqlcmd -S PcName\SQLEXPRESS -U sa -P password -d DataBaseName -i C:\Script.sql -oC:\log.txt `
+
+- S: 此處為在 SSMS 裡寫在「伺服器名稱」的值
+- U: 此處為在 SSMS 裡寫在「登入」的值
+- P: 此處為在 SSMS 裡寫在「密碼」的值
+- i: 匯入的腳本檔，也就是剛才使用資料庫發行精靈 (SqlPubWiz.exe) 產生出來的檔案
+- o: 匯出的檔案，內容大致是平常在 SSMS 裡執行 SQL 語法時會出現在「訊息」窗格裡的內容（我是覺得這批匯入所產生的 log，和我在 SSMS 執行時看到的訊息量不太一樣）
