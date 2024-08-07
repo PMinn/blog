@@ -244,7 +244,7 @@ navbar-var-length: false
 ################
 
 # Ruby Date Format to show dates of posts
-date_format: "YYYY 年 M 月 d 日"
+date_format: "%Y 年 %m 月 %d 日"
 
 # Facebook App ID
 #fb_app_id: ""
