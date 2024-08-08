@@ -1,3 +1,9 @@
+---
+layout: post
+title: Spring Boot
+tags: [Spring Boot,Web Design]
+---
+
 # 1. 前置作業(好像有jdk就行)
 1. 安裝 IntelliJ IDEA Community
    不要安裝最新版 安裝2019.3左右的(https://www.jetbrains.com/idea/download/other.html#2020.2)
